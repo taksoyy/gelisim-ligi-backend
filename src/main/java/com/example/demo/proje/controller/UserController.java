@@ -1,5 +1,6 @@
 package com.example.demo.proje.controller; // Kendi paket adına dikkat et!
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.example.demo.proje.models.User;
 import com.example.demo.proje.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,8 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(origins = "*") // İŞTE GÜVENLİK KALKANINI AÇAN SİHİRLİ KOD!
 @RequestMapping("/api/users")
+@CrossOrigin(origins = "*")  // <--- İŞTE KAPILARI AÇAN SİHİRLİ KOD
 public class UserController {
 
     @Autowired
